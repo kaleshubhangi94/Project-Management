@@ -56,7 +56,7 @@ app.use('/api/tasks', taskRoutes);
 // Sync DB and start server
 (async () => {
     try {
-      await sequelize.sync({ force: true });
+      await sequelize.sync({ force: false });
       console.log('Database synced successfully.');
     } catch (err) {
       console.error('Error syncing database:', err.message);
